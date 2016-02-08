@@ -1,0 +1,77 @@
+issue: IP keeps changing
+cause: unknown, but suspect that a separate config in /etc/wpa_supplicant/wpa_supplicant.conf and /etc/network/interfaces causing conflicts
+solution: ONLY use /etc/network/interfaces.  comment out everything in the other file.
+
+THINGS TO EXPLAIN IN THIS GUIDE
+
+Linux basics
+
+Navigation (relation to / for every command)
+What ~ is
+How to change between directories
+How to navigate to the project folder
+How to create a directory
+How to create a python file
+Using nano
+
+
+
+
+ok so I'm typing this guide up as my brain works.  I completed a fresh install of the dexter industries customized version of raspbian for the GoPiGo.  After installing I had some issues with the wifi because nothing was configured.  So here's what I did:
+
+I tried a bunch of different settings in the /etc/wpa_supplicant/wpa_supplicant.conf file, but those didn't work.  I also tried some stuff generating a wpa_psk passphrase using 'wpa_passphrase "SSID" "PSK"', but that wasn't necessary.  So here's what I discovered.  First things first, ignore the /etc/wpa_supplicant/wpa_supplicant.conf file -- it's not needed.  Do the following:
+
+1)  sudo nano /etc/wpa_supplicant/wpa_supplicant.conf and comment out (add a # to) every line in there.  This will preseve the file in case you need it later, but will basically make it not matter for the time being.
+
+2)  In the initial /etc/network/interfaces file, there will be the following lines:
+
+auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+iface wlan0 inet dhcp
+
+
+You'll want to comment out lines 6-9, inclusive, meaning everything having to do with wlan0.  This causes an issue because basically what this is saying is use the /etc/wpa_supplicant/wpa_supplicant.conf to gather the configuration settings --- we don't want that.  We will do a much simpler configuration.
+
+still inside the /etc/network/interfaces file, press enter a few times and use # and enter a comment about the changes you are making.  In this case, we're adding a static IP configuration to the raspberry pi.  I usually put the date, and who made the change. So in my case, I'd do the following:
+
+# Adding static IP configuration for GoPiGo 252 Project -- KMA 4/27/2015
+setting1
+setting2
+setting3
+setting4
+
+etc.  So now we're going to gather some information we need before we finish configuring.  If you don't understand what these mean, ask the professor or TA for a better explanation.
+
+Type the following commands verbatim:
+
+iwconfig
+
+ifconfig
+
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================================
+guides to create
+
+1) SD card installation - DONE
+2) WiFi setup - DHCP and Static
+3) Navigation commands for the project
+4) Issues & Solutions
+5) References?
+

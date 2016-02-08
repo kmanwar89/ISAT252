@@ -1,0 +1,34 @@
+Lab 7 - Water Quality - Pseudo Code
+
+main() pseudo code:
+
+Present user a menu
+ask user which file they want to open, labpH.txt (1) or Turbidity.txt (2)
+if the choice is not 1 and 2: (while loop)
+	ask the user for input and assign that to a variable
+		if the choice is not 1 and not 2
+			print an error telling the user to pick from only 1 or 2
+		otherwise
+			exit the loop
+
+if the choice is 1, assign 'labpH.txt' to a variable name (filename)
+if the choice is 2, assign 'turbidity.txt' to a variable name (filename)
+
+pass filename to the calculate_average function to calculate average values
+
+
+
+
+calculate_average pseudo code:
+
+open the file given by variable 'filename'
+	store the first line of the file as a header (string)
+	    if the first line is not empty (for loop)
+		read every line in the file until it reaches the end
+		add each value to the 'total' variable to keep track
+		increment the counter by 1
+	calculate average of values (total values / counter)
+	display file header and average values in a human-readable string
+close the file
+
+call the main function

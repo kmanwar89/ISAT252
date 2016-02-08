@@ -1,0 +1,28 @@
+# Purpose: PURPOSE
+# Programmer: Kadar Anwar
+# Language: Python 3.4
+# NAME
+# DATE - ISAT 252
+
+# Declare variables and constants
+
+
+
+
+
+
+# Get input from user
+
+
+
+
+
+
+# Calculate XXXXXXXXXXX
+
+
+
+
+
+
+# Output the result to the user

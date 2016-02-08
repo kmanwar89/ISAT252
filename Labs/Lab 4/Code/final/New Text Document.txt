@@ -1,0 +1,2 @@
+#print("The roots are: " + ((-b + format(discRoot, '.2f'))/2*a) + "+i and " + \ ((-b - format(discRoot, '.2f'))/2*a) + "-i")
+    #print("The roots are: " + str(quotient) + format(discRoot, '.2f') + "+i and " + str(quotient) + format(discRoot, '.2f') + "-i")

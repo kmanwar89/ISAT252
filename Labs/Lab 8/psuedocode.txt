@@ -1,0 +1,25 @@
+driverexam.py
+
+create an array of correct answers
+get the answers from the student
+put the students' answers in a file
+read a line from the file
+if the line read is the same as the correct answer
+	print that it's correct
+	add it to a counter
+if the line isn't the same as the correct answer
+	print that it's incorrect
+	add it to a different counter
+	add it to a separate list of 'incorrect answers'
+perform calculations for the average, number of right or wrong answers
+print out the list of incorrect answers to the user
+
+numanalysis.py
+create an empty list of zeroes
+create a counter variable
+if the counter is not 0
+	have the user input a value
+	add that value to a list
+once all values are added
+	use built in functions to find the high, low, total and average
+
