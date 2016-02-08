@@ -12,6 +12,3 @@ Files from ISAT 252 Fall 2015 Semester @ JMU
   * Lab 8 - Lists
   * Lab 9 - Dictionaries
   * Lab 10 - OOP
-
-Testing SSH key connectivity
-Testing again
