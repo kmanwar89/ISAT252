@@ -1,28 +1,18 @@
-# Purpose: PURPOSE
-# Programmer: Kadar Anwar
+# Purpose: What is the purpose of this program? What will it accomplish?
+# Programmer: <Your name>
 # Language: Python 3.4
-# NAME
+# filename.py
 # DATE - ISAT 252
 
 # Declare variables and constants
-
-
-
-
-
+CONSTANTS
+variable
 
 # Get input from user
 
 
-
-
-
-
-# Calculate XXXXXXXXXXX
-
-
-
-
+# Do something
 
 
 # Output the result to the user
+Be sure to use proper string formatting
